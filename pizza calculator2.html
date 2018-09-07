@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pizza Calculator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/*Miguel Kerschkamp Pizza Calculator*/
+/*Resolutie kan de layout veranderen voor de volgende keer zal ik zorgen dat het niet verandert*/
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.large {
+ background-color: #FFFFE0; /* button */
+ border: none;
+ padding: 0.3%; left:1%; width:4%;
+
+ position: absolute;
+margin-top: 18%;
+ margin-left: 30%;
+}
+
+.large:hover { 
+background-color: gray;      /* button kleur als je er overheen gaat */
+}
+
+.medium {  
+ background-color: #FFFFE0;  /* button */
+ border: none;
+ padding: 0.3%; left:1%; width:4%;
+
+ position: absolute;
+ margin-top: 20%;
+ margin-left: 30%;
+
+}
+
+.medium:hover {              /* button kleur als je er overheen gaat */
+  background-color: gray;
+}
+
+.small {
+ background-color: #FFFFE0;    /* button */
+ border: none;
+ padding: 0.3%; left:1%; width:4%;
+ 
+
+
+ position: absolute;
+ margin-top: 22%;
+ margin-left: 30%;
+
+}
+
+.small:hover {
+  background-color: gray;     /* button kleur als je er overheen gaat */
+}
+
+
+
+
+
+
+
+
+body{
+
+}
+    
+
+
+/* boven kant van de pagina */
+header {
+    background-color:   #8B0000;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+
+nav {             /*de balk aan de zijkant*/
+    float: left;
+    width: 30%;
+    height: 450px; 
+    background: #ccc;
+    padding: 20px;
+}
+
+
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color:   #FFFFE0;
+    height: 450px; 
+}
+
+
+section:after {   
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* onderste gedeelte van de pagina */
+footer {
+    background-color:   #8B0000;
+    padding: 18px;
+    text-align: center;
+    color: white;
+
+
+</style>
+</head>
+</body>
+
+
+
+<button class="large" onclick="getLarge()">Large</button>  
+
+<button class="medium" onclick="getmedium()">medium</button>
+
+<button class="small" onclick="getsmall()">small</button>
+
+    <input style="position:absolute; top:40%; left:46%; width:10%;" type="text" id="userInput"> </html>
+
+  
+     
+     <button style="position:absolute; top:43%; left:46%; width:10%;" onclick="Calc()">Calculate</button>
+
+ 
+
+<header>  
+  <h2>Pizza Calculator</h2>
+</header>
+
+<section>
+  <nav>
+   
+  </nav>
+  
+  <article>
+    <h1>
+      Pizza types  &emsp; &emsp; &emsp; prices &emsp; &emsp; Amount   
+        
+    <h1>
+
+    
+      <ph>
+         &emsp; &ensp; &emsp; &emsp;  &emsp;  &emsp; &emsp; 7.55
+        <ph>
+          <br>
+          <ph>
+          &emsp; &ensp;  &ensp;   &emsp; &emsp;  &emsp; &emsp; 4.75  
+    
+          <ph>
+            <br>
+            <ph>
+        &emsp; &emsp; &ensp; &emsp; &emsp; &emsp;  &emsp;2.25
+
+
+           
+            <ph>
+              <br>
+              <br>
+              <ph> Total Price<ph>
+              <p  id="Prijs"></p><ph>Amount of pizza`s<ph> <p id="input"></p><ph>Price of one Pizza <p id="standaard" ></p>
+              
+
+    <script>
+
+
+function Calc(){  /*berekent de som en laat het zien op het scherm*/
+  console.log(document.getElementById('userInput').value);
+var Input = document.getElementById("userInput").value;
+document.getElementById("Prijs").innerHTML = (price*Input)
+
+document.getElementById("input").innerHTML = (Input)
+document.getElementById("standaard").innerHTML = (price)
+
+}
+
+
+
+
+
+
+var price = ('0');    /* geeft de variable price een anderen waarden als je op een button klik*/
+
+function getLarge(){
+price = ('7.55');
+
+console.log (price);
+}
+
+function getmedium(){price = ('4.75');
+
+console.log (price);
+}
+
+function getsmall(){price = ('2.25');
+
+console.log (price);
+}
+
+
+
+
+
+    </script>
+  </article>
+</section>
+
+<footer>
+  <p>
+    
+  </p>
+</footer>
+
+</body>
+</html>
